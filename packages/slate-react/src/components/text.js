@@ -75,23 +75,7 @@ Text.propTypes = {
  * @type {Component}
  */
 
-const MemoizedText = React.memo(Text, (prev, next) => {
-  return (
-    // PERF: There are cases where it will have
-    // changed, but it's properties will be exactly the same (eg. copy-paste)
-    // which this won't catch. But that's rare and not a drag on performance, so
-    // for simplicity we just let them through.
-    next.node === prev.node &&
-    // If the node parent is a block node, and it was the last child of the
-    // block, re-render to cleanup extra `\n`.
-    (next.parent.object === 'block' &&
-      prev.parent.nodes.last() === prev.node &&
-      next.parent.nodes.last() !== next.node) &&
-    // The formatting hasn't changed.
-    next.annotations.equals(prev.annotations) &&
-    next.decorations.equals(prev.decorations)
-  )
-})
+const MemoizedText = Text
 
 /**
  * Export.
