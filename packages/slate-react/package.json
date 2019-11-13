@@ -13,6 +13,7 @@
     "lib/"
   ],
   "dependencies": {
+    "create-react-ref": "^0.1.0",
     "debug": "^3.1.0",
     "get-window": "^1.1.1",
     "is-window": "^1.0.2",

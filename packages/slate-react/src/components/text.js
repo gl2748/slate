@@ -2,6 +2,7 @@ import ImmutableTypes from 'react-immutable-proptypes'
 import React from 'react'
 import SlateTypes from 'slate-prop-types'
 import Types from 'prop-types'
+import forwardRef from 'create-react-ref/lib/forwardRef'
 import Leaf from './leaf'
 import DATA_ATTRS from '../constants/data-attributes'
 
@@ -11,7 +12,7 @@ import DATA_ATTRS from '../constants/data-attributes'
  * @type {Component}
  */
 
-const Text = React.forwardRef((props, ref) => {
+const Text = forwardRef((props, ref) => {
   const { annotations, block, decorations, node, parent, editor, style } = props
   const { key } = node
   const leaves = node.getLeaves(annotations, decorations)

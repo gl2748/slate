@@ -199,17 +199,7 @@ Leaf.propTypes = {
  * @type {Component}
  */
 
-const MemoizedLeaf = React.memo(Leaf, (prev, next) => {
-  return (
-    next.block === prev.block &&
-    next.index === prev.index &&
-    next.marks === prev.marks &&
-    next.parent === prev.parent &&
-    next.text === prev.text &&
-    next.annotations.equals(prev.annotations) &&
-    next.decorations.equals(prev.decorations)
-  )
-})
+const MemoizedLeaf =  Leaf 
 
 /**
  * Export.

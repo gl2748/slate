@@ -5,6 +5,7 @@ import SlateTypes from 'slate-prop-types'
 import warning from 'tiny-warning'
 import Types from 'prop-types'
 import { PathUtils } from 'slate'
+import createRef from 'create-react-ref/lib/createRef'
 
 import Void from './void'
 import Text from './text'
@@ -58,7 +59,7 @@ class Node extends React.Component {
    * @type {Object}
    */
 
-  ref = React.createRef()
+  ref = createRef()
 
   /**
    * Debug.

@@ -7,6 +7,7 @@ import memoizeOne from 'memoize-one'
 import warning from 'tiny-warning'
 import omit from 'lodash/omit'
 import { Editor as Controller } from 'slate'
+import createRef from 'create-react-ref/lib/createRef'
 
 import EVENT_HANDLERS from '../constants/event-handlers'
 import OTHER_HANDLERS from '../constants/other-handlers'
@@ -98,7 +99,7 @@ class Editor extends React.Component {
     change: null,
     resolves: 0,
     updates: 0,
-    contentRef: React.createRef(),
+    contentRef: createRef(),
   }
 
   /**

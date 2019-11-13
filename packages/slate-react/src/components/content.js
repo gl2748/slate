@@ -12,6 +12,7 @@ import {
   HAS_INPUT_EVENTS_LEVEL_2,
 } from 'slate-dev-environment'
 import Hotkeys from 'slate-hotkeys'
+import createRef from 'create-react-ref/lib/createRef'
 
 import EVENT_HANDLERS from '../constants/event-handlers'
 import DATA_ATTRS from '../constants/data-attributes'
@@ -102,7 +103,7 @@ class Content extends React.Component {
 
   tmp = {
     isUpdatingSelection: false,
-    nodeRef: React.createRef(),
+    nodeRef: createRef(),
     nodeRefs: {},
     contentKey: 0,
     nativeSelection: {}, // Native selection object stored to check if `onNativeSelectionChange` has triggered yet
@@ -114,7 +115,7 @@ class Content extends React.Component {
    * @type {Object}
    */
 
-  ref = React.createRef()
+  ref = createRef()
 
   /**
    * Set both `this.ref` and `editor.el`
